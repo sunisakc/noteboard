@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { FaPencilAlt } from 'react-icons/fa'
 import { FaTrash } from 'react-icons/fa'
-import {  FaFileAlt } from 'react-icons/fa'
+import {  FaWpforms } from 'react-icons/fa'
 
 
 class Note extends Component {
@@ -26,15 +26,15 @@ class Note extends Component {
     }
 
     save() {
-        alert('save')
+        alert(this._newText.value)
     }
 
     renderForm() {
         return (
             <div className="note">
                 <form>
-                    <textarea />
-                    <button onClick={this.save}><  FaFileAlt /></button>
+                    <textarea ref={input => this._newText = input}/>
+                    <button onClick={this.save}><  FaWpforms /></button>
                 </form>
             
             </div>
@@ -45,7 +45,7 @@ class Note extends Component {
     renderDisplay() {
         return (
             <div className="note">
-             <p>Learn to Code</p>
+             <p>{this.props.children}</p>
               <span>
                     <button onClick={this.edit} id="edit">< FaPencilAlt /></button>
                     <button onClick={this.remove}id="remove" ><FaTrash /></button>
@@ -54,11 +54,8 @@ class Note extends Component {
         )
     }
     render() {
-        if(this.state.editing){
-            return this.renderForm()
-        }else {
-            return this.renderDisplay()
-        }
+        return this.state.editing ? this.renderForm() : this.renderDisplay()
+       
     }
 }
 
