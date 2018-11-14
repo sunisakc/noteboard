@@ -31,8 +31,8 @@ div.board {
 div.note {
     height: 150px;
     width: 150px;
-    background-color: yellow;
-    margin: 2px 0;
+    background-color: rgb(223, 85, 188);
+    margin: 20px 20px;
     position: absolute;
     cursor: -webkit-grab;
     -webkit-box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
@@ -82,7 +82,7 @@ div.board button {
 }
 
 #edit {
-  background-color: #337ab7;
+  background-color: #4299a5;
 }
 
 #save {
@@ -90,5 +90,5 @@ div.board button {
 }
 
 #remove {
-  background-color: #d9534f;
+  background-color: #be3939;
 }
