@@ -5,7 +5,7 @@ class Board extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            note: [
+            notes: [
                 {
                     id: 34,
                     note: "Learning Code"
@@ -33,7 +33,7 @@ class Board extends Component {
     render() {
         return (
             <div className="board">
-              {this.state.note.map(this.eachNote)}
+              {this.state.notes.map(this.eachNote)}
             </div>
         )
     }
